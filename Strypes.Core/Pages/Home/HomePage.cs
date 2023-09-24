@@ -1,5 +1,5 @@
 using Microsoft.Playwright;
-using Strypes.Core.Controls.Search;
+using Strypes.Core.Pages.Search.Controls;
 
 namespace Strypes.Core.Pages.Home;
 public class HomePage : BasePage

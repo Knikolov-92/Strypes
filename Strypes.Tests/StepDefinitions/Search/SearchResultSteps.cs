@@ -4,7 +4,7 @@ using Strypes.Core.Extensions;
 using Strypes.Core.Pages.Search;
 using TechTalk.SpecFlow;
 
-namespace Strypes.Tests.StepDefinitions.SearchSteps;
+namespace Strypes.Tests.StepDefinitions.Search;
 
 [Binding]
 public sealed class SearchResultSteps : BasePageSteps<SearchResultPage>

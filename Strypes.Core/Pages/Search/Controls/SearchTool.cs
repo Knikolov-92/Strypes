@@ -1,7 +1,8 @@
 using Microsoft.Playwright;
+using Strypes.Core.Controls;
 using Strypes.Core.Controls.Basic;
 
-namespace Strypes.Core.Controls.Search;
+namespace Strypes.Core.Pages.Search.Controls;
 public class SearchTool : BaseControl
 {
     public SearchTool(ILocator parent) : base(parent) { }

@@ -10,4 +10,6 @@ public static class LocatorExtensions
         await locator.Page.WaitForSelectorAsync(selector, new PageWaitForSelectorOptions { State = state });
     }
     public static async Task<IEnumerable<T>> SelectAll<T>(this ILocator element, Func<ILocator, T> factory) => (await element.AllAsync()).Select(factory);
+
+    public static async Task<IEnumerable<string>> AllTextsTrim(this ILocator element) => (await element.AllTextContentsAsync()).Select(t => t.Trim());
 }

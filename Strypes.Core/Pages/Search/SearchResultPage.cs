@@ -1,6 +1,6 @@
 using Microsoft.Playwright;
-using Strypes.Core.Controls.Search;
 using Strypes.Core.Extensions;
+using Strypes.Core.Pages.Search.Controls;
 using Strypes.Core.Pages.Search.DTO;
 
 namespace Strypes.Core.Pages.Search;

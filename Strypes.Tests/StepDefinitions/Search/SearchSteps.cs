@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using Strypes.Core.Pages.Home;
 using TechTalk.SpecFlow;
 
-namespace Strypes.Tests.StepDefinitions.SearchSteps;
+namespace Strypes.Tests.StepDefinitions.Search;
 
 [Binding]
 public sealed class SearchSteps : BasePageSteps<HomePage>
