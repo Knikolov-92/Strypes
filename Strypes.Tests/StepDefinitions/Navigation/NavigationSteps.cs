@@ -14,11 +14,14 @@ namespace Strypes.Tests.StepDefinitions.Navigation
         {
             switch (page)
             {
-                case "Home":
-                    await this.App.Home();
+                case "Careers":
+                    await this.App.Careers();
                     break;
                 case "Contact":
                     await this.App.Contact();
+                    break;
+                case "Home":
+                    await this.App.Home();
                     break;
                 default:
                     throw new Exception($"Navigation to page {page} is not implemented");

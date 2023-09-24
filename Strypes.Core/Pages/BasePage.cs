@@ -13,5 +13,6 @@ namespace Strypes.Core.Pages
         public string Url => this.Parent.Url;
 
         protected ILocator Find(string selector) => this.Parent.Locator(selector);
+        protected ILocator Find(string selector, string text) => this.Parent.Locator(selector).Filter(new LocatorFilterOptions { HasText = text });
     }
 }

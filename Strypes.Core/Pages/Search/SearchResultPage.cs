@@ -9,7 +9,7 @@ public class SearchResultPage : BasePage
     public SearchResultPage(IPage parent) : base(parent) { }
 
     private ILocator ResultTitleLocator => this.Find("div[class='results-for'] h2").First;
-    private ILocator ResultsContainer => this.Find("div[class*='elementor-posts-container']");
+    private ILocator ResultsContainer => this.Find("[class*='posts-container']");
     private ILocator ResultLocator => this.ResultsContainer.Locator("article");
     private Task<IEnumerable<SearchResult>> AllSearchResults =>
         this.ResultLocator.SelectAll(locator => new SearchResult(locator));

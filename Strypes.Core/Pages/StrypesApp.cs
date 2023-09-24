@@ -1,4 +1,5 @@
 using Microsoft.Playwright;
+using Strypes.Core.Pages.Careers;
 using Strypes.Core.Pages.Contact;
 using Strypes.Core.Pages.Home;
 
@@ -14,6 +15,7 @@ public class StrypesApp
 
     public Task<HomePage> Home() => this.NavigateTo("strypes.eu", p => new HomePage(p));
     public Task<ContactPage> Contact() => this.NavigateTo("contact", p => new ContactPage(p));
+    public Task<CareersPage> Careers() => this.NavigateTo("careers", p => new CareersPage(p));
 
     private async Task<TPage> NavigateTo<TPage>(string urlPath, Func<IPage, TPage> create) where TPage : BasePage
     {
