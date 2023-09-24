@@ -1,4 +1,5 @@
 using Microsoft.Playwright;
+using Strypes.Core.Pages.Home;
 
 namespace Strypes.Core.Pages;
 public class StrypesApp
@@ -8,5 +9,18 @@ public class StrypesApp
     public StrypesApp(IPage page)
     {
         this.page = page;
+    }
+
+    public Task<HomePage> Home() => this.NavigateTo("strypes.eu/", p => new HomePage(p));
+
+    private async Task<TPage> NavigateTo<TPage>(string urlPath, Func<IPage, TPage> create) where TPage : BasePage
+    {
+        if (!this.page.Url.EndsWith(urlPath))
+        {
+            await this.page.GotoAsync(urlPath);
+        }
+
+        await this.page.WaitForURLAsync($"**/{urlPath}");
+        return create(this.page);
     }
 }
