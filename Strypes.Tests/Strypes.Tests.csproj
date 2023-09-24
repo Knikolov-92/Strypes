@@ -7,7 +7,7 @@
   </PropertyGroup>
     
   <ItemGroup>
-    <PackageReference Include="BoDi" Version="1.5.0" />
+    <PackageReference Include="Autofac" Version="7.1.0" />
     <PackageReference Include="Gherkin" Version="27.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
@@ -15,8 +15,9 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
     <PackageReference Include="Microsoft.Playwright" Version="1.38.0" />
     <PackageReference Include="SpecFlow" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.Actions.Configuration" Version="0.1.350" />
     <PackageReference Include="SpecFlow.Actions.Playwright" Version="0.1.285" />
-    <PackageReference Include="SpecFlow.Autofac" Version="3.9.58" />
+    <PackageReference Include="SpecFlow.Autofac" Version="3.9.74" />
     <PackageReference Include="SpecFlow.Internal.Json" Version="1.0.8" />
     <PackageReference Include="SpecFlow.NUnit" Version="3.9.74" />
     <PackageReference Include="nunit" Version="3.13.3" />

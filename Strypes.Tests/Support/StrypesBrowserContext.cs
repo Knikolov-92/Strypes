@@ -13,7 +13,7 @@ public class StrypesBrowserContext
         this.browser = browser;
         this.contextOptions = contextOptions;
     }
-    public string BaseUrl => this.contextOptions.Value.BaseURL;
+    public string BaseUrl => this.contextOptions.Value.BaseURL!;
 
     public async Task<IBrowserContext> NewContext()
     {
