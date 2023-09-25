@@ -23,6 +23,9 @@ namespace Strypes.Tests.StepDefinitions.Navigation
                 case "Home":
                     await this.App.Home();
                     break;
+                case "Nearsurance":
+                    await this.App.Nearsurance();
+                    break;
                 default:
                     throw new Exception($"Navigation to page {page} is not implemented");
             }

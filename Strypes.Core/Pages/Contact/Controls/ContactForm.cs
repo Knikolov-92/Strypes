@@ -9,11 +9,11 @@ public class ContactForm : BaseControl
 {
     public ContactForm(ILocator parent) : base(parent) { }
 
-    private TextInput FirstNameField => new(this.Find("input[name = 'firstname']"));
-    private TextInput LastNameField => new(this.Find("input[name = 'lastname']"));
-    private TextInput EmailField => new(this.Find("input[name = 'email']"));
-    private TextInput CompanyField => new(this.Find("input[name = 'company']"));
-    private TextInput MessageField => new(this.Find("textarea[name = 'message']"));
+    private TextInput FirstNameField => new(this.Find("input[name='firstname']"));
+    private TextInput LastNameField => new(this.Find("input[name='lastname']"));
+    private TextInput EmailField => new(this.Find("input[name='email']"));
+    private TextInput CompanyField => new(this.Find("input[name='company']"));
+    private TextInput MessageField => new(this.Find("textarea[name='message']"));
     private Checkbox PrivacyPolicyCheckbox => new(this.Find("label", "I agree with the Privacy policy and Terms of use."));
     private Checkbox SubscribeCheckbox => new(this.Find("label", "Subscribe to our newsletter"));
     private ILocator SendButton => this.Find("input[value='SEND']");

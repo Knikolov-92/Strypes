@@ -13,9 +13,10 @@ public class StrypesApp
         this.page = page;
     }
 
-    public Task<HomePage> Home() => this.NavigateTo("strypes.eu", p => new HomePage(p));
-    public Task<ContactPage> Contact() => this.NavigateTo("contact", p => new ContactPage(p));
     public Task<CareersPage> Careers() => this.NavigateTo("careers", p => new CareersPage(p));
+    public Task<ContactPage> Contact() => this.NavigateTo("contact", p => new ContactPage(p));
+    public Task<HomePage> Home() => this.NavigateTo("strypes.eu", p => new HomePage(p));
+    public Task<CareersPage> Nearsurance() => this.NavigateTo("nearsurance", p => new CareersPage(p));
 
     private async Task<TPage> NavigateTo<TPage>(string urlPath, Func<IPage, TPage> create) where TPage : BasePage
     {

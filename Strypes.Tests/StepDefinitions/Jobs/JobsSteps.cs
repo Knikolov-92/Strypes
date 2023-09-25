@@ -11,7 +11,6 @@ public sealed class JobsSteps : BasePageSteps<JobsPage>
 {
     public JobsSteps(ScenarioContext scenarioContext) : base(scenarioContext, p => new JobsPage(p)) { }
 
-
     [Then(@"the job description for the position ""(.*)"" is displayed")]
     public async Task ThenTheJobDescriptionForThePositionIsDisplayed(string positionName)
     {
