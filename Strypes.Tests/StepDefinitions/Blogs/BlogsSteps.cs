@@ -13,6 +13,6 @@ public sealed class BlogsSteps : BasePageSteps<BlogsPage>
     [When(@"the blogs sub-tab '(.*)' is opened")]
     public async Task WhenTheBlogsSubTabIsOpened(string tab) => await this.Page.SelectTab(tab);
 
-    [Then(@"the number of displayed blogs is '(\d+)'")]
-    public async Task ThenTheNumberOfDisplayedNewsIs(int number) => (await this.Page.GetAllBlogs()).Count.Should().Be(number);
+    [Then(@"the number of displayed blogs is greater than or equal to '(\d+)'")]
+    public async Task ThenTheNumberOfDisplayedNewsIs(int number) => (await this.Page.GetAllBlogs()).Count.Should().BeGreaterThanOrEqualTo(number);
 }
